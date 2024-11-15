@@ -17,8 +17,8 @@ const LANG_CODES = {
 }
 const CATEGORIES = ["neutral","chuck","all"]
 const NUMBERS = [1,2,3,4,5,6,7,8,9,"all"]
-//let BASE_URL = "https://kurtlebakken.pythonanywhere.com/api/v1/jokes/"
-let BASE_URL = "http://127.0.0.1:5000/api/v1/jokes/";
+let BASE_URL = "https://kurtlebakken.pythonanywhere.com/api/v1/jokes/"
+//let BASE_URL = "http://127.0.0.1:5000/api/v1/jokes/";
 
 
 
