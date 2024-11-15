@@ -17,8 +17,8 @@ const LANG_CODES = {
 }
 const CATEGORIES = ["neutral","chuck","all"]
 const NUMBERS = [1,2,3,4,5,6,7,8,9,"all"]
-let BASE_URL = "https://kurtlebakken.pythonanywhere.com/api/v1/jokes/"
-//let BASE_URL = "http://127.0.0.1:5000/api/v1/jokes/";
+//let BASE_URL = "https://kurtlebakken.pythonanywhere.com/api/v1/jokes/"
+let BASE_URL = "http://127.0.0.1:5000/api/v1/jokes/";
 
 
 
@@ -44,7 +44,8 @@ async function getJson(url){
         mode: "cors"})
     .then(response => response.json())
     .catch(error => console.error(error));
-        
+    console.log(data)
+    return data
 }
 async function getJokes(){
     console.log("begin fetch fn")
@@ -55,10 +56,13 @@ async function getJokes(){
         document.querySelector("#selNum").value , 
         document.querySelector("#selId").value
     ]
-
+    
     let url = `${BASE_URL}/${input[0]}/${input[1]}/${input[2]}`;
-    let data = await(getJson(url));
-    for (joke of data["jokes"]){
+    let data = await getJson(url);
+    let table = document.querySelector("#jokes");
+    console.log(table);
+    console.log(data)
+    for (let joke of data["jokes"]){
         let article = document.createElement("article");
         article.setAttribute("id","joke")
         article.innerHTML = joke; 
