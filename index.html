@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Project #3 or 4 (i cant remember)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" defer src=script.js></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="section">
+        <h1 class="title">Pick the language, the category and the number of jokes to hear</h1>
+        <div class="container">
+            <!---form class="form"!--->
+                <div class="fixed-grid has-3-cols">
+                    <div class="grid">
+                        <div class="field cell" id="fieldLanguage">
+                            <label>Language</label>
+                            <div class="control select is-fullwidth">
+                                <select name="language" id="selLang">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field cell" id="fieldCategory">
+                            <label>Category</label>
+                            <div class="control select is-fullwidth">
+                                <select name="category" id="selCat">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field cell" id="fieldNumber">
+                            <label>Number</label>
+                            <div class="control select is-fullwidth">
+                                <select name="number" id="selNum">
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field cell" id="fieldId">
+                            <label>Id (opt)</label>
+                            <div class="control select is-fullwidth">
+                                <input type="text" name="id" id="selId">
+                            
+                            </div>
+                        </div>
+                        <div class="cell is-col-span-3">
+                            <button onclick="getJokes()" id="btnAmuse" class="button is-primary is-fullwidth"
+                                value="Tell me a joke">Amuse me</button>
+                        </div>
+                    </div>
+                </div>
+            <!---/form!--->
+        </div>
+    </div>
+    <div class="section">
+        <div class="container" id="jokes">
+            <!--- I think this has to be a table, make sure that the tests can read this output!!!!-->
+            <table>
+                <thead>
+                    <tr>
+
+                    </tr>
+                </thead>
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
